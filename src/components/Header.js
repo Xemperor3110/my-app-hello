@@ -1,7 +1,11 @@
+import { useState } from 'react'
 import Logo from '../assets/images/Travling.png'
 
-function Header(props){
-    const {title, bgColor} = props;
+function Header(){
+    const [count, setCount] = useState(0);
+    const incrementCount = () =>{
+        setCount(count +1);
+    };
     return (
         <header className={" h-[112px] w-[1440px] max-w-full flex flex-row items-center justify-between"}>
         <a
@@ -20,7 +24,9 @@ function Header(props){
             About Us
           </a>
         </div>
-        <button className='bg-[#FA8443] rounded-lg h-[46px] w-[120px] text-white'>
+        <button 
+              onClick={incrementCount}
+              className='bg-[#FA8443] rounded-lg h-[46px] w-[120px] text-white'>
           Sign Up
         </button>
       </header>
