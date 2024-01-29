@@ -8,7 +8,7 @@ import SideRight from './assets/images/side right.png'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { IoMdEye, IoMdEyeOff } from 'react-icons/io';
-
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 function Login() {
 	const navigate = useNavigate();
 	const [email, setEmail] = useState('');
@@ -19,8 +19,8 @@ function Login() {
 		setIsShowPassword(!isShowPassword);
 	};
 	const onLogin = () => {
-		if (!email) {
-			return alert('Email is required');
+		if (!email.includes("@")) {
+			return alert('Email has incorrect format');
 		}
 		if (!password) {
 			return alert('Password is required');
@@ -28,7 +28,9 @@ function Login() {
 		if (password?.length < 8) {
 			return alert('Password must min 8 characters');
 		}
-
+		if (email !== 'admin@admin.com' || password !== 'admin@123'){
+			return alert('Email or Password incorrect')
+		}
 		alert('Login Successful With: ' + email + ' | ' + password);
 		navigate('/');
 	};
