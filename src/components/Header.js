@@ -12,24 +12,23 @@ function Header(){
          <img src={Logo} alt="" className='mt-2 h-[35px] w-[141px]' />
         </a>
         <div className='space-x-[80px] font-bold text-[15px]'>
-          <a className='hover:text-white' href="/product">
-            Product
-          </a>
-          <a className='hover:text-white' href="/contact">
-            Contact
-          </a>
-          <a className='hover:text-white' href='about-us'>
-            About Us
-          </a>
+        <Link to="/product">
+				        <span>Product</span>
+			    </Link>
+          <Link to="/contact">
+				        <span>Contact</span>
+			    </Link>
+          <Link to="/us">
+				        <span>About Us</span>
+			    </Link>
         </div>
         <Link
 				to="/login"
-				className="bg-[#FA8443] rounded-lg h-[46px] w-[120px] text-white flex items-center justify-center	"
-			>
+				className="bg-[#FA8443] rounded-lg h-[46px] w-[120px] text-white flex items-center justify-center	">
 				<span>Sign In</span>
 			</Link>
       </header>
     )
 }
 
-export default Header
+export default Header;

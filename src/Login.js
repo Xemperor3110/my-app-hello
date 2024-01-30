@@ -1,9 +1,4 @@
-import Header from './components/Header'
-import Banner from './components/banner'
-import Slide from './components/Slide';
-import Section from './components/Section';
-import End from './components/End';
-import Footer from './components/Footer';
+
 import SideRight from './assets/images/side right.png'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';

@@ -4,7 +4,7 @@ import Slide from './components/Slide';
 import Section from './components/Section';
 import End from './components/End';
 import Footer from './components/Footer';
-import Login from './Login';
+
 
 function App() {
   return (
