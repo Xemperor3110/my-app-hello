@@ -17,10 +17,10 @@ function Header(){
             <Menu href="/us" label="About Us" />
         </div>
         <Link
-				to="/login"
-				className="bg-[#FA8443] rounded-lg h-[46px] w-[120px] text-white flex items-center justify-center	">
+            to="/login"
+            className="bg-[#FA8443] rounded-lg h-[46px] w-[120px] text-white flex items-center justify-center	">
 				<span>Sign In</span>
-			</Link>
+			  </Link>
       </header>
     )
 }
