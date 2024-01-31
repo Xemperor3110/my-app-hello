@@ -1,5 +1,5 @@
 
-import SideRight from './assets/images/side right.png'
+import SideRight from '../assets/images/side right.png'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { IoMdEye, IoMdEyeOff } from 'react-icons/io';

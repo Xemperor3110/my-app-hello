@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import Menu from './Menu';
 import Logo from '../assets/images/Travling.png'
 import { Link } from 'react-router-dom';
 
@@ -12,15 +12,9 @@ function Header(){
          <img src={Logo} alt="" className='mt-2 h-[35px] w-[141px]' />
         </a>
         <div className='space-x-[80px] font-bold text-[15px]'>
-        <Link to="/product">
-				        <span>Product</span>
-			    </Link>
-          <Link to="/contact">
-				        <span>Contact</span>
-			    </Link>
-          <Link to="/us">
-				        <span>About Us</span>
-			    </Link>
+            <Menu href="/product" label="Product" />
+            <Menu href="/contact" label="Contact" />
+            <Menu href="/us" label="About Us" />
         </div>
         <Link
 				to="/login"
