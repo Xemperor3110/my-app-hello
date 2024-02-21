@@ -1,5 +1,5 @@
-import Photo from '../assets/images/photo1.png'
-import BlogItem from './BlockItem';
+import Photo from '../assets/images/photo1.png';
+import BlogItem from './BlockItem'
 
 import { useEffect, useState } from 'react';
 
