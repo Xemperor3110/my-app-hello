@@ -1,0 +1,40 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "name": "Hà Nội"
+        },
+        {
+            "id": 2,
+            "name": "Hô Chí Minh"
+        },
+        {
+            "id": 3,
+            "name": "Đà Nẵng"
+        },
+        {
+            "id": 4,
+            "name": "Đà Lạt"
+        },
+        {
+            "id": 5,
+            "name": "Quảng Nam"
+        },
+        {
+            "id": 6,
+            "name": "Vũng Tàu"
+        },
+        {
+            "id": 7,
+            "name": "Cần Thơ"
+        },
+        {
+            "id": 8,
+            "name": "Vĩnh Long"
+        }
+    ],
+    
+    "profile": {
+      "name": "Super"
+    }
+  }

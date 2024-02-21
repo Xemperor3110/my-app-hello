@@ -1,43 +1,34 @@
-import illustrasi from '../assets/images/illustrasi.png'
-import fly from '../assets/images/fly.svg'
-import hotel from '../assets/images/hotel.svg'
-import group from '../assets/images/group.svg'
+import Photo from '../assets/images/photo1.png';
+import BlogItem  from './BlockItem';
 
-function Section() {
-    return (
-        <div className='h-[594px] mt-20 w-full  grid grid-cols-2 gap-[25px]' >
-            <div>
-                <img src={illustrasi} alt="" />
-            </div>
-            <div className='mt-10 ml-8'>
-                <p className="text-[40px] font-bold leading-[50px]">Why Choose Us</p>
-                <p className='mt-4 mb-6 w-[400px]'>Enjoy different experiences in every place you visit and discover new and affordable adventures of course.</p>
-                <div>
-                    <div className='bg-white shadow-md mb-5 h-[80px] w-[450px] flex flex-nowrap items-center rounded-xl'>
-                        <img src={fly} className='w-[30px] m-5' alt="" />
-                        <div>
-                            <p className='font-bold'>Flight Ticket</p>
-                            <p className='text-[14px]'>Vitae donec pellentesque a aliquam et ultricies auctor. </p>
-                        </div>
-                    </div>
-                    <div className='  mb-5 h-[80px] w-[450px] flex flex-nowrap items-center'>
-                        <img src={hotel} className='w-[30px] m-5' alt="" />
-                        <div>
-                            <p className='font-bold'>Accomodation</p>
-                            <p className='text-[14px]'>Vitae donec pellentesque a aliquam et ultricies auctor. </p>
-                        </div>
-                    </div>
-                    <div className=' mb-5 h-[80px] w-[450px] flex flex-nowrap items-center '>
-                        <img src={group} className='w-[30px] m-5' alt="" />
-                        <div>
-                            <p className='font-bold'>Packaged Tour</p>
-                            <p className='text-[14px]'>Vitae donec pellentesque a aliquam et ultricies auctor.  </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
+import { useEffect, useState } from 'react';
+
+function Session1() {
+	const [listPosts, setlistPosts] = useState([]);
+
+	useEffect{{} =>{
+		fetch('http://localhost:4000/posts')
+			.then((raw) => raw.json())
+			.then((response) => { 
+				setlistPosts(response);
+				console.log('response',response);
+			})
+			.catch((error) =>{
+				console.log('error',error);
+			})
+	},[]}
+	return (
+		<div className="pb-[105px]">
+			<p className="text-[36px] font-bold mb-[8px]">
+				Popular Destinations
+			</p>
+			<p>Vacations to make your experience enjoyable in Indonesia!</p>
+			<div className="mt-[60px] grid grid-cols-4 gap-[30px]">
+				{listPost.map((item) => (
+					<BlogItem photo={Photo} item={item} key={item.id} />
+				))}
+			</div>
+		</div>
+	);
 }
-
-export default Section;
+export default Session1;
