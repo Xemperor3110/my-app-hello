@@ -1,13 +1,12 @@
-import { useState, useContext } from 'react';
+import { useState} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { IoMdEye, IoMdEyeOff } from 'react-icons/io';
-import { ThemeContext } from '../App';
+import {connct, connect} from 'react-redux';
+import {login} from '../stores/store';
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-function Login() {
-	const { setUserEmail } = useContext(ThemeContext);
-
+function Login({loginRequest}) {
 	const navigate = useNavigate();
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
@@ -111,5 +110,9 @@ function Login() {
 		</div>
 	);
 }
-
-export default Login;
+const mapDispatchToProps = (dispatch) => (
+	{
+		loginRequest: (payload) => dispatch(login(payload)),
+	}
+);
+export default connect(null, mapDispatchToProps)(login);
